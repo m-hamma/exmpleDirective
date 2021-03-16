@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ColorDirective } from './color.directive';
 import { HomepageComponent } from './homepage/homepage.component';
 import { UsersComponent } from './users/users.component';
+import { IfDirective } from './if.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ColorDirective,
     HomepageComponent,
-    UsersComponent
+    UsersComponent,
+    IfDirective
   ],
   imports: [
     BrowserModule,
