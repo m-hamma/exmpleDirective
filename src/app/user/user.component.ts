@@ -7,9 +7,12 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-  public id:string;
-  public name:string;
-  constructor(private activatedroute:ActivatedRoute) { }
+  public id:string | null;
+  public name:string | null;
+  constructor(private activatedroute:ActivatedRoute) {
+   this.name = null;
+   this.id = null;
+   }
 
   ngOnInit(): void {
     this.activatedroute.paramMap.subscribe((paramMap:ParamMap)=>{

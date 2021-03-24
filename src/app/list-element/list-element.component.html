@@ -1,0 +1,8 @@
+<h1 class="s-10">List élements</h1>
+<ul class="m-10 list-primary">
+  <li
+    [routerLink]="['/users', user.id, user.name]"
+    *ngFor="let aliment of aliments">
+    {{aliment}}
+  </li>
+</ul>
