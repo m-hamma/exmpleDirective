@@ -4,14 +4,14 @@ import { Input, OnInit, Directive, ElementRef, HostListener, HostBinding} from '
   selector: '[appColor]'
 })
 export class ColorDirective implements OnInit{
-    @Input('appColor') public couleurs:{clr:string,bgclr:string};
+    //@Input('appColor') public couleurs:{clr:string,bgclr:string};
 
     @HostListener('mouseenter', ['$event'])
     onEnter( e: MouseEvent ) {
       console.log(e,this.el);
-      console.log('------------'+this.couleurs);
-      this.el.nativeElement.style.color = this.couleurs.clr;
-      this.el.nativeElement.style.backgroundColor = this.couleurs.bgclr;
+      //console.log('------------'+this.couleurs);
+      //this.el.nativeElement.style.color = this.couleurs.clr;
+      //this.el.nativeElement.style.backgroundColor = this.couleurs.bgclr;
     }
 
     @HostListener('mouseleave', ['$event'])
