@@ -11,7 +11,9 @@ export class ListElementComponent implements OnInit {
     constructor(private alimentService : AlimentService) {
     this.aliments = this.alimentService.aliments;
     }
-
+  public removeAliment (index:number){
+  this.alimentService.rmoveOne(index);
+  }
   ngOnInit(): void {
   }
 

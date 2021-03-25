@@ -2,7 +2,8 @@
 <ul class="m-10 list-primary">
   <li
     [routerLink]="['/users', user.id, user.name]"
-    *ngFor="let aliment of aliments">
+    (click)="removeAliment(index)"
+    *ngFor="let aliment of aliments; let index=index">
     {{aliment}}
   </li>
 </ul>
