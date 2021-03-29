@@ -19,5 +19,11 @@ export class UserComponent implements OnInit {
       this.id = paramMap.get('id');
       this.name = paramMap.get('name');
     });
+     this.activatedroute.queryParamMap.subscribe((paramMap:ParamMap)=>{
+                                            this.name = paramMap.get('name');
+                                          });
+    this.activatedroute.fragment.subscribe((frag:string)=> {
+    console.log(frag);
+    });
   }
 }
