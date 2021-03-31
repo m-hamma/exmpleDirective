@@ -9,9 +9,12 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 export class UserComponent implements OnInit {
   public id:string | null;
   public name:string | null;
+  public details : string;
+
   constructor(private activatedroute:ActivatedRoute) {
    this.name = null;
    this.id = null;
+   this. details = null;
    }
 
   ngOnInit(): void {
@@ -21,6 +24,7 @@ export class UserComponent implements OnInit {
     });
      this.activatedroute.queryParamMap.subscribe((paramMap:ParamMap)=>{
                                             this.name = paramMap.get('name');
+                                             this.details = paramMap.get('details');
                                           });
     this.activatedroute.fragment.subscribe((frag:string)=> {
     console.log(frag);

@@ -28,6 +28,7 @@ public users : User[] = [
     this._Router.navigate([user.id, user.name], {
      relativeTo: this._Route,
      queryParams: {name: user.name},
+     //queryParamsHandling: 'merge',
      fragment : 'foo'
     });
   }
