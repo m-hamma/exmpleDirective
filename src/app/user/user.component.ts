@@ -9,12 +9,11 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 export class UserComponent implements OnInit {
   public id:string | null;
   public name:string | null;
-  public details : string;
+  public details : any;
 
   constructor(private activatedroute:ActivatedRoute) {
    this.name = null;
    this.id = null;
-   this. details = null;
    }
 
   ngOnInit(): void {

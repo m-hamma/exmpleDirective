@@ -12,6 +12,7 @@ import { UserComponent } from './user/user.component';
 import { AddElementComponent } from './add-element/add-element.component';
 import { ListElementComponent } from './list-element/list-element.component';
 import {AlimentService} from  './aliment.service';
+import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import {AlimentService} from  './aliment.service';
     IfDirective,
     UserComponent,
     AddElementComponent,
-    ListElementComponent
+    ListElementComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
